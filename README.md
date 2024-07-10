@@ -1,2 +1,2 @@
-# GIT-config
- Mandatory git configuration files for code contributors
+# IPS8200HQ-OUT16A1
+ Software package for X-NUCLEO-OUT16A1 board

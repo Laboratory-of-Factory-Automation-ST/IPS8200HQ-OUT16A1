@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for Projects of X-CUBE-IPS Package</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="../_htmresc/mini-st_2020.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="../_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for-projects-of-x-cube-ips">Release Notes for <mark>Projects of X-CUBE-IPS</mark></h1>
+<p>Copyright © 2022-24 STMicroelectronics<br />
+</p>
+<a href="https://www.st.com" class="logo"><img src="../_htmresc/st_logo_2020.png" alt="ST logo" /></a>
+</center>
+<p><br />
+</p>
+<h1 id="purpose">Purpose</h1>
+<p>The projects are a set of applicative tasks that aim to explain and provide use cases of the different products features based on the products hardware (Boards, STM32 Core(s) features, interconnections and peripherals) and built around the different firmware components. They can be directly used or adapted by the <mark>STM32CubeF4</mark> or <mark>STM32CubeG4</mark> Firmware Package users. They provide basic functionalities, show main features or demonstrate performance. They are provided with preconfigured projects for the main supported toolchains.</p>
+<p>In the <mark>STM32CubeF4</mark> or <mark>STM32CubeG4</mark> Firmware Package, the projects are organized in a sequential scheme based on the following levels:</p>
+<ul>
+<li>Boards: Hardware platform (evaluation, discovery, nucleo boards)</li>
+<li>Project Category:
+<ul>
+<li>Examples</li>
+</ul></li>
+</ul>
+<p>This software provides a set of examples useful to experiment how to correctly manage the Intelligent Power Switch family of STMicroelectronics products.</p>
+<p>Currently available code can be used with the following products:</p>
+<ul>
+<li><strong>ISO8200BQ</strong>, a Galvanic isolated Octal High-Side smart power solid state-relay (Smart driving 0.7A per channel)</li>
+<li><strong>IPS2050H</strong>, a Dual High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong>, a Dual High-Side Switch (Smart driving 5.7A loads)</li>
+<li><strong>IPS1025H</strong>, a Single High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong>, a Single High-Side Switch (Smart driving 5.7A loads)</li>
+<li><strong>IPS4260L</strong>, a Quad Low-Side Switch (Smart driving 0.5A loads)</li>
+<li><strong>IPS160HF</strong>, a Single High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS8160HQ</strong>, an Octal High-Side Switch (Smart driving 0.7A loads)</li>
+<li><strong>IPS161HF</strong>, a Single High-Side Switch (Smart driving 0.7A loads)</li>
+<li><strong>ISO808</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads (Smart driving 0.7A loads)</li>
+<li><strong>ISO808A</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface (Smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads (Smart driving 1.0A loads)</li>
+<li><strong>ISO808A-1</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface (Smart driving 1.0A loads)</li>
+<li><strong>IPS1025HF</strong>, a Single High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS8200HQ</strong>, an Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip (Smart driving 0.7A loads)</li>
+<li><strong>IPS8200HQ-1</strong>, an Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip (Smart driving 1.0A loads)</li>
+<li><strong>IPS8160HQ-1</strong>, an Octal High-Side Switch (Smart driving 1.0A loads)</li>
+</ul>
+<p>Here is the list of references to the user documents:</p>
+<ul>
+<li><a href="http://www.st.com/stm32cube">www.st.com/stm32cube</a> : STM32Cube</li>
+<li><a href="http://www.st.com/stm32nucleo">www.st.com/stm32nucleo</a> : STM32 Nucleo boards</li>
+<li><a href="http://www.st.com/x-nucleo">www.st.com/x-nucleo</a> : STM32 Nucleo expansion boards</li>
+</ul>
+</div>
+<section id="update-history" class="col-sm-12 col-lg-8">
+<h1>Update History</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section7" checked aria-hidden="true"> <label for="collapse-section7" aria-hidden="true"><strong>V3.0.0 / 06-June-2024</strong></label>
+<div>
+<h2 id="main-changes">Main Changes</h2>
+<h3 id="v3.3.0">V3.3.0</h3>
+<ul>
+<li>Projects reviewed to be CubeMX compatible</li>
+</ul>
+<p><br />
+</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents">Contents</h2>
+<p><small>The Project categories flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT01A2/EightChannels/">Projects/NUCLEO-F401RE/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT03A1/DefaultBoard/">Projects/NUCLEO-F401RE/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT03A1/FourBoards/">Projects/NUCLEO-F401RE/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT04A1/DefaultBoard/">Projects/NUCLEO-F401RE/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT04A1/FourBoards">Projects/NUCLEO-F401RE/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT05A1/DefaultBoard/">Projects/NUCLEO-F401RE/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT05A1/FourBoards">Projects/NUCLEO-F401RE/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT06A1/DefaultBoard/">Projects/NUCLEO-F401RE/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT06A1/FourBoards">Projects/NUCLEO-F401RE/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT07A1/FourChannels/">Projects/NUCLEO-F401RE/Examples/OUT07A1/FourChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT08A1/DefaultBoard/">Projects/NUCLEO-F401RE/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT08A1/FourBoards/">Projects/NUCLEO-F401RE/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT09A1/EightChannels/">Projects/NUCLEO-F401RE/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT10A1/DefaultBoard/">Projects/NUCLEO-F401RE/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT10A1/FourBoards/">Projects/NUCLEO-F401RE/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT11A1/DirectMode/">Projects/NUCLEO-F401RE/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT11A1/SynchronousMode/">Projects/NUCLEO-F401RE/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT12A1/DaisyChain/">Projects/NUCLEO-F401RE/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT12A1/Regular_8_Channels/">Projects/NUCLEO-F401RE/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT12A1/Regular_16_Channels/">Projects/NUCLEO-F401RE/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT13A1/DirectMode/">Projects/NUCLEO-F401RE/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT13A1/SynchronousMode/">Projects/NUCLEO-F401RE/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT14A1/DaisyChain/">Projects/NUCLEO-F401RE/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT14A1/Regular_8_Channels/">Projects/NUCLEO-F401RE/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT14A1/Regular_16_Channels/">Projects/NUCLEO-F401RE/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT15A1/DefaultBoard/">Projects/NUCLEO-F401RE/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT15A1/TwoBoards/">Projects/NUCLEO-F401RE/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT16A1/DaisyChain/">Projects/NUCLEO-F401RE/Examples/OUT16A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT16A1/SPI_8_Channels/">Projects/NUCLEO-F401RE/Examples/OUT16A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT16A1/Parallel_8_Channels/">Projects/NUCLEO-F401RE/Examples/OUT16A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT17A1/DaisyChain/">Projects/NUCLEO-F401RE/Examples/OUT17A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT17A1/SPI_8_Channels/">Projects/NUCLEO-F401RE/Examples/OUT17A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT17A1/Parallel_8_Channels/">Projects/NUCLEO-F401RE/Examples/OUT17A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-F401RE/Examples/OUT19A1/EightChannels/">Projects/NUCLEO-F401RE/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT01A2/EightChannels/">Projects/NUCLEO-G431RB/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT03A1/DefaultBoard/">Projects/NUCLEO-G431RB/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT03A1/FourBoards/">Projects/NUCLEO-G431RB/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT04A1/DefaultBoard/">Projects/NUCLEO-G431RB/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT04A1/FourBoards">Projects/NUCLEO-G431RB/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT05A1/DefaultBoard/">Projects/NUCLEO-G431RB/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT05A1/FourBoards">Projects/NUCLEO-G431RB/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT06A1/DefaultBoard/">Projects/NUCLEO-G431RB/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT06A1/FourBoards">Projects/NUCLEO-G431RB/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT07A1/FourChannels/">Projects/NUCLEO-G431RB/Examples/OUT07A1/FourChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT08A1/DefaultBoard/">Projects/NUCLEO-G431RB/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT08A1/FourBoards/">Projects/NUCLEO-G431RB/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT09A1/EightChannels/">Projects/NUCLEO-G431RB/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT10A1/DefaultBoard/">Projects/NUCLEO-G431RB/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT10A1/FourBoards/">Projects/NUCLEO-G431RB/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT11A1/DirectMode/">Projects/NUCLEO-G431RB/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT11A1/SynchronousMode/">Projects/NUCLEO-G431RB/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT12A1/DaisyChain/">Projects/NUCLEO-G431RB/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT12A1/Regular_8_Channels/">Projects/NUCLEO-G431RB/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT12A1/Regular_16_Channels/">Projects/NUCLEO-G431RB/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT13A1/DirectMode/">Projects/NUCLEO-G431RB/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT13A1/SynchronousMode/">Projects/NUCLEO-G431RB/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT14A1/DaisyChain/">Projects/NUCLEO-G431RB/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT14A1/Regular_8_Channels/">Projects/NUCLEO-G431RB/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT14A1/Regular_16_Channels/">Projects/NUCLEO-G431RB/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT15A1/DefaultBoard/">Projects/NUCLEO-G431RB/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT15A1/TwoBoards/">Projects/NUCLEO-G431RB/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT16A1/DaisyChain/">Projects/NUCLEO-G431RB/Examples/OUT16A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT16A1/SPI_8_Channels/">Projects/NUCLEO-G431RB/Examples/OUT16A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT16A1/Parallel_8_Channels/">Projects/NUCLEO-G431RB/Examples/OUT16A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT17A1/DaisyChain/">Projects/NUCLEO-G431RB/Examples/OUT17A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT17A1/SPI_8_Channels/">Projects/NUCLEO-G431RB/Examples/OUT17A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT17A1/Parallel_8_Channels/">Projects/NUCLEO-G431RB/Examples/OUT17A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="NUCLEO-G431RB/Examples/OUT19A1/EightChannels/">Projects/NUCLEO-G431RB/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.15.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.11.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+<li><strong>X-NUCLEO-OUT01A2</strong></li>
+<li><strong>X-NUCLEO-OUT03A1</strong></li>
+<li><strong>X-NUCLEO-OUT04A1</strong></li>
+<li><strong>X-NUCLEO-OUT05A1</strong></li>
+<li><strong>X-NUCLEO-OUT06A1</strong></li>
+<li><strong>X-NUCLEO-OUT07A1</strong></li>
+<li><strong>X-NUCLEO-OUT08A1</strong></li>
+<li><strong>X-NUCLEO-OUT09A1</strong></li>
+<li><strong>X-NUCLEO-OUT10A1</strong></li>
+<li><strong>X-NUCLEO-OUT11A1</strong></li>
+<li><strong>X-NUCLEO-OUT12A1</strong></li>
+<li><strong>X-NUCLEO-OUT13A1</strong></li>
+<li><strong>X-NUCLEO-OUT14A1</strong></li>
+<li><strong>X-NUCLEO-OUT15A1</strong></li>
+<li><strong>X-NUCLEO-OUT16A1</strong></li>
+<li><strong>X-NUCLEO-OUT17A1</strong></li>
+<li><strong>X-NUCLEO-OUT19A1</strong></li>
+<li><strong>ISO8200BQ</strong>, (Galvanic Isolated Octal High-Side Power Solid State Relay, smart driving 0.7A per channel)</li>
+<li><strong>IPS2050H</strong> (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong> (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS1025H</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong> (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS4260L</strong> (Quad Low-Side Switch, smart driving 0.5A loads)</li>
+<li><strong>IPS160HF</strong> (Single High-Side Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8160HQ</strong> (Octal High-Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS161HF</strong> (Single High-Side Switch, smart driving 0.7A loads)</li>
+<li><strong>ISO808</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>ISO808A</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface, smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A loads)</li>
+<li><strong>ISO808A-1</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface, smart driving 1.0A loads)</li>
+<li><strong>IPS1025HF</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8200HQ</strong> (Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>IPS8200HQ-1</strong> (Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+<li><strong>IPS8160HQ-1</strong> (Octal High-Side Switch, smart driving 1.0A loads)</li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section6" aria-hidden="true"> <label for="collapse-section6" aria-hidden="true"><strong>V2.2.0 / 04-December-2023</strong></label>
+<div>
+<h2 id="main-changes-1">Main Changes</h2>
+<h3 id="v2.2.0">V2.2.0</h3>
+<ul>
+<li>Added support for X-NUCLEO-OUT07A1 STM32 expansion boards.</li>
+</ul>
+<p><br />
+</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-1">Contents</h2>
+<p><small>The Project categories flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT01A2/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT03A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT03A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT04A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT04A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT05A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT05A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT06A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT06A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT07A1/FourChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT07A1/FourChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT08A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT08A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT09A1/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT10A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT10A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT11A1/DirectMode/">Projects/STM32F401RE-Nucleo/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT11A1/SynchronousMode/">Projects/STM32F401RE-Nucleo/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/Regular_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/Regular_16_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT13A1/DirectMode/">Projects/STM32F401RE-Nucleo/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT13A1/SynchronousMode/">Projects/STM32F401RE-Nucleo/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/Regular_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/Regular_16_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT15A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT15A1/TwoBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT16A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT16A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT16A1/SPI_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT16A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT16A1/Parallel_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT16A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT17A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT17A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT17A1/SPI_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT17A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT17A1/Parallel_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT17A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT19A1/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT01A2/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT03A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT03A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT04A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT04A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT05A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT05A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT06A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT06A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT07A1/FourChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT07A1/FourChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT08A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT08A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT09A1/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT10A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT10A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT11A1/DirectMode/">Projects/STM32G431RB-Nucleo/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT11A1/SynchronousMode/">Projects/STM32G431RB-Nucleo/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/Regular_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/Regular_16_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT13A1/DirectMode/">Projects/STM32G431RB-Nucleo/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT13A1/SynchronousMode/">Projects/STM32G431RB-Nucleo/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/Regular_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/Regular_16_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT15A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT15A1/TwoBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT16A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT16A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT16A1/SPI_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT16A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT16A1/Parallel_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT16A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT17A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT17A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT17A1/SPI_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT17A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT17A1/Parallel_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT17A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT19A1/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-1">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-1">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.14.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.10.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-1">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+<li><strong>X-NUCLEO-OUT01A2</strong></li>
+<li><strong>X-NUCLEO-OUT03A1</strong></li>
+<li><strong>X-NUCLEO-OUT04A1</strong></li>
+<li><strong>X-NUCLEO-OUT05A1</strong></li>
+<li><strong>X-NUCLEO-OUT06A1</strong></li>
+<li><strong>X-NUCLEO-OUT07A1</strong></li>
+<li><strong>X-NUCLEO-OUT08A1</strong></li>
+<li><strong>X-NUCLEO-OUT09A1</strong></li>
+<li><strong>X-NUCLEO-OUT10A1</strong></li>
+<li><strong>X-NUCLEO-OUT11A1</strong></li>
+<li><strong>X-NUCLEO-OUT12A1</strong></li>
+<li><strong>X-NUCLEO-OUT13A1</strong></li>
+<li><strong>X-NUCLEO-OUT14A1</strong></li>
+<li><strong>X-NUCLEO-OUT15A1</strong></li>
+<li><strong>X-NUCLEO-OUT16A1</strong></li>
+<li><strong>X-NUCLEO-OUT17A1</strong></li>
+<li><strong>X-NUCLEO-OUT19A1</strong></li>
+<li><strong>ISO8200BQ</strong>, (Galvanic Isolated Octal High-Side Power Solid State Relay, smart driving 0.7A per channel)</li>
+<li><strong>IPS2050H</strong> (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong> (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS1025H</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong> (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS4260L</strong> (Quad Low-Side Switch, smart driving 0.5A loads)</li>
+<li><strong>IPS160HF</strong> (Single High-Side Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8160HQ</strong> (Octal High-Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS161HF</strong> (Single High-Side Switch, smart driving 0.7A loads)</li>
+<li><strong>ISO808</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>ISO808A</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface, smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A loads)</li>
+<li><strong>ISO808A-1</strong> (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface, smart driving 1.0A loads)</li>
+<li><strong>IPS1025HF</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8200HQ</strong> (Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>IPS8200HQ-1</strong> (Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+<li><strong>IPS8160HQ-1</strong> (Octal High-Side Switch, smart driving 1.0A loads)</li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-1">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section5" aria-hidden="true"> <label for="collapse-section5" aria-hidden="true"><strong>V2.1.0 / 06-October-2023</strong></label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<h3 id="v2.1.0">V2.1.0</h3>
+<ul>
+<li>Added support for X-NUCLEO-OUT16A1 and X-NUCLEO-OUT17A1 STM32 expansion boards.</li>
+</ul>
+<p><br />
+</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<p><small>The Project categories flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT01A2/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT03A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT03A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT04A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT04A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT05A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT05A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT06A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT06A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT08A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT08A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT09A1/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT10A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT10A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT11A1/DirectMode/">Projects/STM32F401RE-Nucleo/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT11A1/SynchronousMode/">Projects/STM32F401RE-Nucleo/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/Regular_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/Regular_16_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT13A1/DirectMode/">Projects/STM32F401RE-Nucleo/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT13A1/SynchronousMode/">Projects/STM32F401RE-Nucleo/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/Regular_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/Regular_16_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT15A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT15A1/TwoBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT16A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT16A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT16A1/SPI_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT16A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT16A1/Parallel_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT16A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT17A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT17A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT17A1/SPI_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT17A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT17A1/Parallel_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT17A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT19A1/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT01A2/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT03A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT03A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT04A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT04A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT05A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT05A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT06A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT06A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT08A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT08A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT09A1/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT10A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT10A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT11A1/DirectMode/">Projects/STM32G431RB-Nucleo/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT11A1/SynchronousMode/">Projects/STM32G431RB-Nucleo/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/Regular_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/Regular_16_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT13A1/DirectMode/">Projects/STM32G431RB-Nucleo/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT13A1/SynchronousMode/">Projects/STM32G431RB-Nucleo/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/Regular_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/Regular_16_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT15A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT15A1/TwoBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT16A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT16A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT16A1/SPI_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT16A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT16A1/Parallel_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT16A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT17A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT17A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT17A1/SPI_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT17A1/SPI_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT17A1/Parallel_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT17A1/Parallel_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT19A1/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.13.2 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.9.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+<li><strong>X-NUCLEO-OUT01A2</strong></li>
+<li><strong>X-NUCLEO-OUT03A1</strong></li>
+<li><strong>X-NUCLEO-OUT04A1</strong></li>
+<li><strong>X-NUCLEO-OUT05A1</strong></li>
+<li><strong>X-NUCLEO-OUT06A1</strong></li>
+<li><strong>X-NUCLEO-OUT08A1</strong></li>
+<li><strong>X-NUCLEO-OUT09A1</strong></li>
+<li><strong>X-NUCLEO-OUT10A1</strong></li>
+<li><strong>X-NUCLEO-OUT11A1</strong></li>
+<li><strong>X-NUCLEO-OUT12A1</strong></li>
+<li><strong>X-NUCLEO-OUT13A1</strong></li>
+<li><strong>X-NUCLEO-OUT14A1</strong></li>
+<li><strong>X-NUCLEO-OUT15A1</strong></li>
+<li><strong>X-NUCLEO-OUT16A1</strong></li>
+<li><strong>X-NUCLEO-OUT17A1</strong></li>
+<li><strong>X-NUCLEO-OUT19A1</strong></li>
+<li><strong>ISO8200BQ</strong>, (Galvanic Isolated Octal High Side Power Solid State Relay, smart driving 0.7A per channel)</li>
+<li><strong>IPS2050H</strong> (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong> (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS1025H</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong> (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS160HF</strong> (Single High Side Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8160HQ</strong> (Octal High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS161HF</strong> (Single High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>ISO808</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>ISO808A</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 1.0A loads)</li>
+<li><strong>ISO808A-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 1.0A loads)</li>
+<li><strong>IPS1025HF</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8200HQ</strong> (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>IPS8200HQ-1</strong> (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+<li><strong>IPS8160HQ-1</strong> (Octal High Side Switch, smart driving 1.0A loads)</li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-2">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true"><strong>V2.0.0 / 21-July-2023</strong></label>
+<div>
+<h2 id="main-changes-3">Main Changes</h2>
+<h3 id="v2.0.0">V2.0.0</h3>
+<ul>
+<li>General re-organization of all projects to be compliant with CubeMX requirement</li>
+</ul>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-3">Contents</h2>
+<p><small>The Project categories flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT01A2/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT03A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT03A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT04A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT04A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT05A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT05A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT06A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT06A1/FourBoards">Projects/STM32F401RE-Nucleo/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT08A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT08A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT09A1/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT10A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT10A1/FourBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT11A1/DirectMode/">Projects/STM32F401RE-Nucleo/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT11A1/SynchronousMode/">Projects/STM32F401RE-Nucleo/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/Regular_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT12A1/Regular_16_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT13A1/DirectMode/">Projects/STM32F401RE-Nucleo/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT13A1/SynchronousMode/">Projects/STM32F401RE-Nucleo/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/DaisyChain/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/Regular_8_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT14A1/Regular_16_Channels/">Projects/STM32F401RE-Nucleo/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT15A1/DefaultBoard/">Projects/STM32F401RE-Nucleo/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT15A1/TwoBoards/">Projects/STM32F401RE-Nucleo/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/OUT19A1/EightChannels/">Projects/STM32F401RE-Nucleo/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT01A2/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT01A2/EightChannels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT03A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT03A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT03A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT03A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT04A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT04A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT04A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT04A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT05A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT05A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT05A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT05A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT06A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT06A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT06A1/FourBoards">Projects/STM32G431RB-Nucleo/Examples/OUT06A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT08A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT08A1/DefaultBoard/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT08A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT08A1/FourBoards/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT09A1/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT09A1/EightChannels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT10A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT10A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT10A1/FourBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT10A1/FourBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT11A1/DirectMode/">Projects/STM32G431RB-Nucleo/Examples/OUT11A1/DirectMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT11A1/SynchronousMode/">Projects/STM32G431RB-Nucleo/Examples/OUT11A1/SynchronousMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/DaisyChain/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/Regular_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT12A1/Regular_16_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT12A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT13A1/DirectMode/">Projects/STM32G431RB-Nucleo/Examples/OUT13A1/DirectMode/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT13A1/SynchronousMode/">Projects/STM32G431RB-Nucleo/Examples/OUT13A1/SynchronousMode/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/DaisyChain/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/DaisyChain/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/Regular_8_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/Regular_8_Channels/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT14A1/Regular_16_Channels/">Projects/STM32G431RB-Nucleo/Examples/OUT14A1/Regular_16_Channels/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT15A1/DefaultBoard/">Projects/STM32G431RB-Nucleo/Examples/OUT15A1/DefaultBoard/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT15A1/TwoBoards/">Projects/STM32G431RB-Nucleo/Examples/OUT15A1/TwoBoards/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/OUT19A1/EightChannels/">Projects/STM32G431RB-Nucleo/Examples/OUT19A1/EightChannels/</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-3">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-3">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.12.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.9.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-3">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+<li><strong>X-NUCLEO-OUT01A2</strong></li>
+<li><strong>X-NUCLEO-OUT03A1</strong></li>
+<li><strong>X-NUCLEO-OUT04A1</strong></li>
+<li><strong>X-NUCLEO-OUT05A1</strong></li>
+<li><strong>X-NUCLEO-OUT06A1</strong></li>
+<li><strong>X-NUCLEO-OUT08A1</strong></li>
+<li><strong>X-NUCLEO-OUT09A1</strong></li>
+<li><strong>X-NUCLEO-OUT10A1</strong></li>
+<li><strong>X-NUCLEO-OUT11A1</strong></li>
+<li><strong>X-NUCLEO-OUT12A1</strong></li>
+<li><strong>X-NUCLEO-OUT13A1</strong></li>
+<li><strong>X-NUCLEO-OUT14A1</strong></li>
+<li><strong>X-NUCLEO-OUT15A1</strong></li>
+<li><strong>X-NUCLEO-OUT19A1</strong></li>
+<li><strong>ISO8200BQ</strong>, (Galvanic Isolated Octal High Side Power Solid State Relay, smart driving 0.7A per channel)</li>
+<li><strong>IPS2050H</strong> (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong> (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS1025H</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong> (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS160HF</strong> (Single High Side Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8160HQ</strong> (Octal High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS161HF</strong> (Single High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>ISO808</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>ISO808A</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 1.0A loads)</li>
+<li><strong>ISO808A-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 1.0A loads)</li>
+<li><strong>IPS1025HF</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS8160HQ-1</strong> (Octal High Side Switch, smart driving 1.0A loads)</li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-3">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-3">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true"><strong>V1.1.1 / 15-March-2023</strong></label>
+<div>
+<h2 id="main-changes-4">Main Changes</h2>
+<h3 id="v1.1.1">V1.1.1</h3>
+<ul>
+<li>Out09_19:
+<ul>
+<li>Firmware revision managemenent review</li>
+</ul></li>
+<li>Out11_13:
+<ul>
+<li>Firmware revision managemenent review</li>
+</ul></li>
+<li>Out12_14:
+<ul>
+<li>Firmware revision managemenent review</li>
+<li>Fixed interaction between steady state and PWM in daisy chain mode</li>
+<li>Fixed instance limit value in loops on instances</li>
+<li>Operating mode setup embedded in Init procedure</li>
+<li>Added checks to verify that in Daisy chain mode system is fully populated (two boards needed, both configurated in Daisy chain mode)</li>
+<li>In Daisy chain mode the Output Enable pin used in the two boards is forced to the default one, common pin between the two boards</li>
+</ul></li>
+</ul>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-4">Contents</h2>
+<p><small>The Project categories flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out03_04/">Projects/STM32F401RE-Nucleo/Examples/Out03_04/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out05_06/">Projects/STM32F401RE-Nucleo/Examples/Out05_06/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out15/">Projects/STM32F401RE-Nucleo/Examples/Out15/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out08_10/">Projects/STM32F401RE-Nucleo/Examples/Out08_10/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out09_19/">Projects/STM32F401RE-Nucleo/Examples/Out09_19/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out11_13/">Projects/STM32F401RE-Nucleo/Examples/Out11_13/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out12_14/">Projects/STM32F401RE-Nucleo/Examples/Out12_14/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out03_04/">Projects/STM32G431RB-Nucleo/Examples/Out03_04/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out05_06/">Projects/STM32G431RB-Nucleo/Examples/Out05_06/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out15/">Projects/STM32G431RB-Nucleo/Examples/Out15/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out08_10/">Projects/STM32G431RB-Nucleo/Examples/Out08_10/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out09_19/">Projects/STM32G431RB-Nucleo/Examples/Out09_19/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out11_13/">Projects/STM32G431RB-Nucleo/Examples/Out11_13/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out12_14/">Projects/STM32G431RB-Nucleo/Examples/Out12_14/</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-4">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-4">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.11.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.7.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-4">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+<li><strong>X-NUCLEO-OUT03A1</strong></li>
+<li><strong>X-NUCLEO-OUT04A1</strong></li>
+<li><strong>X-NUCLEO-OUT05A1</strong></li>
+<li><strong>X-NUCLEO-OUT06A1</strong></li>
+<li><strong>X-NUCLEO-OUT08A1</strong></li>
+<li><strong>X-NUCLEO-OUT09A1</strong></li>
+<li><strong>X-NUCLEO-OUT10A1</strong></li>
+<li><strong>X-NUCLEO-OUT11A1</strong></li>
+<li><strong>X-NUCLEO-OUT12A1</strong></li>
+<li><strong>X-NUCLEO-OUT13A1</strong></li>
+<li><strong>X-NUCLEO-OUT14A1</strong></li>
+<li><strong>X-NUCLEO-OUT15A1</strong></li>
+<li><strong>X-NUCLEO-OUT19A1</strong></li>
+<li><strong>IPS1025H</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong> (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS2050H</strong> (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong> (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS1025HF</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS160HF</strong> (Single High Side Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS161HF</strong> (Single High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS8160HQ</strong> (Octal High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS8160HQ-1</strong> (Octal High Side Switch, smart driving 1.0A loads)</li>
+<li><strong>ISO808</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 1.0A loads)</li>
+<li><strong>ISO808A</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 0.7A loads)</li>
+<li><strong>ISO808A-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 1.0A loads)</li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-4">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-4">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true"><strong>V1.1.0 / 15-December-2022</strong></label>
+<div>
+<h2 id="main-changes-5">Main Changes</h2>
+<h3 id="v1.1.0">V1.1.0</h3>
+<p>Added projects for:</p>
+<ul>
+<li>X-NUCLEO-OUT08A1</li>
+<li>X-NUCLEO-OUT09A1</li>
+<li>X-NUCLEO-OUT10A1</li>
+<li>X-NUCLEO-OUT11A1</li>
+<li>X-NUCLEO-OUT12A1</li>
+<li>X-NUCLEO-OUT13A1</li>
+<li>X-NUCLEO-OUT14A1</li>
+<li>X-NUCLEO-OUT19A1</li>
+</ul>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-5">Contents</h2>
+<p><small>The Project categories flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out03_04/">Projects/STM32F401RE-Nucleo/Examples/Out03_04/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out05_06/">Projects/STM32F401RE-Nucleo/Examples/Out05_06/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out15/">Projects/STM32F401RE-Nucleo/Examples/Out15/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out08_10/">Projects/STM32F401RE-Nucleo/Examples/Out08_10/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out09_19/">Projects/STM32F401RE-Nucleo/Examples/Out09_19/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out11_13/">Projects/STM32F401RE-Nucleo/Examples/Out11_13/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out12_14/">Projects/STM32F401RE-Nucleo/Examples/Out12_14/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out03_04/">Projects/STM32G431RB-Nucleo/Examples/Out03_04/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out05_06/">Projects/STM32G431RB-Nucleo/Examples/Out05_06/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out15/">Projects/STM32G431RB-Nucleo/Examples/Out15/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out08_10/">Projects/STM32G431RB-Nucleo/Examples/Out08_10/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out09_19/">Projects/STM32G431RB-Nucleo/Examples/Out09_19/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out11_13/">Projects/STM32G431RB-Nucleo/Examples/Out11_13/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out12_14/">Projects/STM32G431RB-Nucleo/Examples/Out12_14/</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-5">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-5">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.11.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.7.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-5">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+<li><strong>X-NUCLEO-OUT03A1</strong></li>
+<li><strong>X-NUCLEO-OUT04A1</strong></li>
+<li><strong>X-NUCLEO-OUT05A1</strong></li>
+<li><strong>X-NUCLEO-OUT06A1</strong></li>
+<li><strong>X-NUCLEO-OUT08A1</strong></li>
+<li><strong>X-NUCLEO-OUT09A1</strong></li>
+<li><strong>X-NUCLEO-OUT10A1</strong></li>
+<li><strong>X-NUCLEO-OUT11A1</strong></li>
+<li><strong>X-NUCLEO-OUT12A1</strong></li>
+<li><strong>X-NUCLEO-OUT13A1</strong></li>
+<li><strong>X-NUCLEO-OUT14A1</strong></li>
+<li><strong>X-NUCLEO-OUT15A1</strong></li>
+<li><strong>X-NUCLEO-OUT19A1</strong></li>
+<li><strong>IPS1025H</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong> (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS2050H</strong> (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong> (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS1025HF</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS160HF</strong> (Single High Side Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS161HF</strong> (Single High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS8160HQ</strong> (Octal High Side Switch, smart driving 0.7A loads)</li>
+<li><strong>IPS8160HQ-1</strong> (Octal High Side Switch, smart driving 1.0A loads)</li>
+<li><strong>ISO808</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay for high inductive loads, smart driving 1.0A loads)</li>
+<li><strong>ISO808A</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 0.7A loads)</li>
+<li><strong>ISO808A-1</strong> (Galvanic Isolated Octal High Side Power Solid State Relay with SPI interface, smart driving 1.0A loads)</li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-5">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-5">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true"><strong>V1.0.0 / 11-February-2022</strong></label>
+<div>
+<h2 id="main-changes-6">Main Changes</h2>
+<h3 id="first-release-v1.0.0">First release (V1.0.0)</h3>
+<p>Initial release for the project.</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-6">Contents</h2>
+<p><small>The Project categories flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out03_04/">Projects/STM32F401RE-Nucleo/Examples/Out03_04/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out05_06/">Projects/STM32F401RE-Nucleo/Examples/Out05_06/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32F401RE-Nucleo/Examples/Out15/">Projects/STM32F401RE-Nucleo/Examples/Out15/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out03_04/">Projects/STM32G431RB-Nucleo/Examples/Out03_04/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out05_06/">Projects/STM32G431RB-Nucleo/Examples/Out05_06/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-G431RB</td>
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;"><a href="STM32G431RB-Nucleo/Examples/Out15/">Projects/STM32G431RB-Nucleo/Examples/Out15/</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-6">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-6">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.32.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.9.0 + ST-LINK/V2 or ST-LINK/V3</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-6">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+<li><strong>X-NUCLEO-OUT03A1</strong></li>
+<li><strong>X-NUCLEO-OUT04A1</strong></li>
+<li><strong>X-NUCLEO-OUT05A1</strong></li>
+<li><strong>X-NUCLEO-OUT06A1</strong></li>
+<li><strong>X-NUCLEO-OUT15A1</strong></li>
+<li><strong>IPS1025H</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong> (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS2050H</strong> (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong> (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+<li><strong>IPS1025HF</strong> (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-6">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-6">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="sticky">
+<div class="columns">
+<div class="column" style="width:95%;">
+<p>For complete documentation on <strong>STM32 Microcontrollers</strong> , visit: [<a href="http://www.st.com/STM32">www.st.com/STM32</a>]</p>
+</div><div class="column" style="width:5%;">
+<p><abbr title="Based on template cx626901 version 2.1">Info</abbr></p>
+</div>
+</div>
+</footer>
+</body>
+</html>

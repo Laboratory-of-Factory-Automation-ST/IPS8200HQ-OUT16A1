@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for X-CUBE-IPS Expansion Software Package</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st_2020.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for-x-cube-ips">Release Notes for <mark>X-CUBE-IPS</mark></h1>
+<p>Copyright © 2022-24 STMicroelectronics<br />
+</p>
+<a href="https://www.st.com" class="logo"><img src="_htmresc/st_logo_2020.png" alt="ST logo" /></a>
+</center>
+<p><br />
+</p>
+<h1 id="purpose">Purpose</h1>
+<p>The <strong>X-CUBE-IPS</strong> software package is an expansion for STM32Cube. This software provides drivers running on STM32 for STMicroelectronics:</p>
+<ul>
+<li><strong>ISO8200BQ</strong>, a Galvanic isolated Octal High-Side smart power solid state-relay (Smart driving 0.7A per channel)</li>
+<li><strong>IPS2050H</strong>, a Dual High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS2050H-32</strong>, a Dual High-Side Switch (Smart driving 5.7A loads)</li>
+<li><strong>IPS1025H</strong>, a Single High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS1025H-32</strong>, a Single High-Side Switch (Smart driving 5.7A loads)</li>
+<li><strong>IPS4260L</strong>, a Quad Low-Side Switch (Smart driving 0.5A per channel)</li>
+<li><strong>IPS160HF</strong>, a Single High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS8160HQ</strong>, an Octal Channel High-Side driver (Smart driving 0.7A per channel)</li>
+<li><strong>IPS161HF</strong>, a Single High-Side Switch (Smart driving 0.7A loads)</li>
+<li><strong>ISO808</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads (Smart driving 0.7A per channel)</li>
+<li><strong>ISO808A</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads (Smart driving 0.7A loads)</li>
+<li><strong>ISO808-1</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads (Smart driving 1.0A per channel)</li>
+<li><strong>ISO808A-1</strong>, a Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads (Smart driving 1.0A loads)</li>
+<li><strong>IPS1025HF</strong>, a Single High-Side Switch (Smart driving 2.5A loads)</li>
+<li><strong>IPS8200HQ</strong>, an Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip (Smart driving 0.7A loads)</li>
+<li><strong>IPS8200HQ-1</strong>, an Octal High-Side smart power solid-state relay with serial/parallel selectable interface on-chip (Smart driving 1.0A loads)</li>
+<li><strong>IPS8160HQ-1</strong>, an Octal Channel High-Side driver (Smart driving 1.0A per channel)</li>
+</ul>
+<p>The X-CUBE-IPS is built on top of STM32Cube software technology that eases portability across different STM32 microcontrollers.</p>
+<p><strong>X-CUBE-IPS</strong> software features:</p>
+<ul>
+<li>Driver layer for complete management of <strong>ISO8200BQ</strong>, <strong>IPS2050H</strong>, <strong>IPS2050H-32</strong>, <strong>IPS1025H</strong>, <strong>IPS1025H-32</strong>, <strong>IPS4260L</strong>, <strong>IPS160HF</strong>, <strong>IPS8160HQ</strong>, <strong>IPS161HF</strong>, <strong>ISO808</strong>, <strong>ISO808A</strong>, <strong>ISO808-1</strong>, <strong>ISO808A-1</strong>, <strong>IPS1025HF</strong>, <strong>IPS8200HQ</strong>, <strong>IPS8200HQ-1</strong> and <strong>IPS8160HQ-1</strong> devices</li>
+<li>GPIOs, PWMs and IRQs configuration; Fault interrupts handling</li>
+<li>Sample implementation available on
+<ul>
+<li><strong>X-NUCLEO-OUT01A2</strong> (ISO8200BQ) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT03A1</strong> (IPS2050H) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT04A1</strong> (IPS2050H-32) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT05A1</strong> (IPS1025H) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT06A1</strong> (IPS1025H-32) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT07A1</strong> (IPS4260L) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT08A1</strong> (IPS160HF) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT09A1</strong> (IPS8160HQ) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT10A1</strong> (IPS161HF) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT11A1</strong> (ISO808) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT12A1</strong> (ISO808A) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT13A1</strong> (ISO808-1) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT14A1</strong> (ISO808A-1) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT15A1</strong> (IPS1025HF) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT16A1</strong> (IPS8200HQ) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT17A1</strong> (IPS8200HQ-1) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+<li><strong>X-NUCLEO-OUT19A1</strong> (IPS8160HQ-1) board connected to
+<ul>
+<li>a <strong>NUCLEO-F401RE</strong> development board (MB1136 rev C) <strong>OR</strong></li>
+<li>a <strong>NUCLEO-G431RB</strong> development board (MB1367C)</li>
+</ul></li>
+</ul></li>
+<li>It is possible to build systems with multiple boards stacked to evaluate multichannels digital output modules, even with different output current capabilities.</li>
+<li>Easy portability across different MCU families, thanks to STM32Cube</li>
+<li>Free user-friendly license terms</li>
+</ul>
+<p><br />
+</p>
+<p>The figure below shows the overall architecture.</p>
+<center>
+<figure>
+<img src="_htmresc/X-CUBE-IPS_Components.png" alt="" /><figcaption>X-CUBE-IPS</figcaption>
+</figure>
+</center>
+<p><br />
+</p>
+<p>Here is the list of references to user documents:</p>
+<ul>
+<li><a href="http://www.st.com/stm32cube">www.st.com/stm32cube</a> : STM32Cube</li>
+<li><a href="http://www.st.com/stm32nucleo">www.st.com/stm32nucleo</a> : STM32 Nucleo boards</li>
+<li><a href="http://www.st.com/x-nucleo">www.st.com/x-nucleo</a> : STM32 Nucleo expansion boards</li>
+</ul>
+</div>
+<section id="update-history" class="col-sm-12 col-lg-8">
+<h1>Update History</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section7" checked aria-hidden="true"> <label for="collapse-section7" aria-hidden="true"><strong>V3.0.0 / 06-June-2024</strong></label>
+<div>
+<h2 id="main-changes">Main Changes</h2>
+<h3 id="v3.0.0">V3.0.0</h3>
+<p>Official release of X-CUBE-IPS package:</p>
+<ul>
+<li>Package reviewed to be CubeMX compatible</li>
+</ul>
+<p><br />
+</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Components:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-CUBE-IPS</td>
+<td style="text-align: left;">3.0.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Documentation/X-CUBE-IPS_STM32F401RE-Nucleo.chm">NUCLEO-F401RE</a>, <a href="Documentation/X-CUBE-IPS_STM32G431RB-Nucleo.chm">NUCLEO-G431RB</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso8200bq</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso8200bq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips2050h</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips2050h_32</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025h</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025h_32</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips4260l</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips4260l\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips160hf</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips160hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8160hq</td>
+<td style="text-align: left;">1.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips161hf</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips161hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808</td>
+<td style="text-align: left;">1.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808a</td>
+<td style="text-align: left;">1.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808_1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808a_1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025hf</td>
+<td style="text-align: left;">1.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips8200hq</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8200hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8200hq_1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8200hq_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips8160hq_1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT01A2</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT03A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT03A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT04A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT04A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT05A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT05A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT06A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT06A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT07A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT07A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT08A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT08A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT09A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT09A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT10A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT10A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT11A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT11A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT12A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT12A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT13A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT13A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT14A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT14A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT15A1</td>
+<td style="text-align: left;">1.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT15A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT16A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT16A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT17A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT17A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT19A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT19A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx CMSIS</td>
+<td style="text-align: left;">2.6.9 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32F4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx CMSIS</td>
+<td style="text-align: left;">1.2.3 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32G4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">1.8.2 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\STM32F4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx HAL</td>
+<td style="text-align: left;">1.2.3 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\STM32G4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F4xx-NUCLEO</td>
+<td style="text-align: left;">1.2.9 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32F4xx-Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32G4xx_NUCLEO</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32G4xx_Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OUT01A2, OUT03A1, OUT04A1, OUT05A1, OUT06A1, OUT07A1,</td>
+<td style="text-align: left;">3.3.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OUT08A1, OUT09A1, OUT10A1, OUT11A1, OUT12A1, OUT13A1,</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OUT14A1, OUT15A1, OUT16A1, OUT17A1, OUT19A1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.15.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.11.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT01A2</strong>: One X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT01A2</strong> board: an expansion board based on ISO8200BQ (Galvanic isolated octal high-side smart power solid state-relay, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT03A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT04A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT05A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT06A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT07A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT07A1</strong> board: an expansion board based on IPS4260L (Quad Channel Low-Side driver, smart driving 0.5A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT08A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT09A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT09A1</strong> board: an expansion board based on IPS8160HQ (Octal Channel High-Side driver, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT10A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT11A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT11A1</strong> board: an expansion board based on ISO808 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT12A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT13A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT13A1</strong> board: an expansion board based on ISO808-1 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT14A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT15A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT15A1</strong> board: an expansion board based on IPS1025HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate a 2-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT16A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT16A1</strong> board: an expansion board based on IPS8200HQ (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT17A1</strong> board: an expansion board based on IPS8200HQ-1 (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it must be configured in SPI DAISY CHAIN mode and it will demonstrate a 16-channel digital output module.<br> Using a single expansion board, the system can be configured in parallel interface or in SPI interface, and in both cases it will demonstrate an 8-channel digital output module.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT17A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT16A1</strong> board: an expansion board based on IPS8200HQ (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT17A1</strong> board: an expansion board based on IPS8200HQ-1 (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it must be configured in SPI DAISY CHAIN mode and it will demonstrate a 16-channel digital output module.<br> Using a single expansion board, the system can be configured in parallel interface or in SPI interface, and in both cases it will demonstrate an 8-channel digital output module.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT19A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT19A1</strong> board: an expansion board based on IPS8160HQ-1 (Octal Channel High-Side driver, smart driving 1.0A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section6" aria-hidden="true"> <label for="collapse-section6" aria-hidden="true"><strong>V2.2.0 / 06-December-2023</strong></label>
+<div>
+<h2 id="main-changes-1">Main Changes</h2>
+<h3 id="v2.2.0">V2.2.0</h3>
+<p>Official release of X-CUBE-IPS package:</p>
+<ul>
+<li>Added management for <strong>X-NUCLEO-OUT07A1</strong> (<strong>IPS4260L</strong>) STM32 expansion board.</li>
+</ul>
+<p><br />
+</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-1">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Components:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-CUBE-IPS</td>
+<td style="text-align: left;">2.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Documentation/X-CUBE-IPS_STM32F401RE-Nucleo.chm">STM32F401RE-NUCLEO</a>, <a href="Documentation/X-CUBE-IPS_STM32G431RB-Nucleo.chm">STM32G431RB-NUCLEO</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso8200bq</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso8200bq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips2050h</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips2050h_32</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025h</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025h_32</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips4260l</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips4260l\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips160hf</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips160hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8160hq</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips161hf</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips161hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808a</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808_1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808a_1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025hf</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips8200hq</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8200hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8200hq_1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8200hq_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips8160hq_1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT01A2</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT03A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT03A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT04A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT04A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT05A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT05A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT06A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT06A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT07A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT07A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT08A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT08A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT09A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT09A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT10A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT10A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT11A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT11A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT12A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT12A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT13A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT13A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT14A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT14A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT15A1</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT15A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT16A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT16A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT17A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT17A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT19A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT19A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx CMSIS</td>
+<td style="text-align: left;">2.6.8</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32F4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx CMSIS</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32G4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">1.8.0</td>
+<td style="text-align: left;"><a href="Drivers\STM32F4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx HAL</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\STM32G4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F4xx-NUCLEO</td>
+<td style="text-align: left;">1.2.8</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32F4xx-Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32G4xx_NUCLEO</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32G4xx_Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OUT01A2, OUT03A1, OUT04A1, OUT05A1, OUT06A1, OUT07A1,</td>
+<td style="text-align: left;">2.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OUT08A1, OUT09A1, OUT10A1, OUT11A1, OUT12A1, OUT13A1,</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OUT14A1, OUT15A1, OUT16A1, OUT17A1, OUT19A1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-1">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-1">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.14.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.10.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-1">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT01A2</strong>: One X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT01A2</strong> board: an expansion board based on ISO8200BQ (Galvanic isolated octal high-side smart power solid state-relay, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT03A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT04A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT05A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT06A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT07A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT07A1</strong> board: an expansion board based on IPS4260L (Quad Channel Low-Side driver, smart driving 0.5A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT08A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT09A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT09A1</strong> board: an expansion board based on IPS8160HQ (Octal Channel High-Side driver, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT10A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT11A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT11A1</strong> board: an expansion board based on ISO808 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT12A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT13A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT13A1</strong> board: an expansion board based on ISO808-1 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT14A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT15A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT15A1</strong> board: an expansion board based on IPS1025HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate a 2-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT16A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT16A1</strong> board: an expansion board based on IPS8200HQ (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT17A1</strong> board: an expansion board based on IPS8200HQ-1 (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it must be configured in SPI DAISY CHAIN mode and it will demonstrate a 16-channel digital output module.<br> Using a single expansion board, the system can be configured in parallel interface or in SPI interface, and in both cases it will demonstrate an 8-channel digital output module.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT17A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT16A1</strong> board: an expansion board based on IPS8200HQ (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT17A1</strong> board: an expansion board based on IPS8200HQ-1 (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it must be configured in SPI DAISY CHAIN mode and it will demonstrate a 16-channel digital output module.<br> Using a single expansion board, the system can be configured in parallel interface or in SPI interface, and in both cases it will demonstrate an 8-channel digital output module.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT19A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT19A1</strong> board: an expansion board based on IPS8160HQ-1 (Octal Channel High-Side driver, smart driving 1.0A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-1">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section5" aria-hidden="true"> <label for="collapse-section5" aria-hidden="true"><strong>V2.1.0 / 06-October-2023</strong></label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<h3 id="v2.1.0">V2.1.0</h3>
+<p>Official release of X-CUBE-IPS package:</p>
+<ul>
+<li>Added management for <strong>X-NUCLEO-OUT16A1</strong> (<strong>IPS8200HQ</strong>) and <strong>X-NUCLEO-OUT17A1</strong> (<strong>IPS8200HQ-1</strong>) STM32 expansion boards.</li>
+</ul>
+<p><br />
+</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Components:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-CUBE-IPS</td>
+<td style="text-align: left;">2.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Documentation/X-CUBE-IPS_STM32F401RE-Nucleo.chm">STM32F401RE-NUCLEO</a>, <a href="Documentation/X-CUBE-IPS_STM32G431RB-Nucleo.chm">STM32G431RB-NUCLEO</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso8200bq</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso8200bq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips2050h</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips2050h_32</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025h</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025h_32</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips160hf</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips160hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips8160hq</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips161hf</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips161hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808a</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808_1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808a_1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025hf</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8200hq</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8200hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips8200hq_1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8200hq_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8160hq_1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT01A2</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT03A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT03A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT04A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT04A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT05A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT05A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT06A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT06A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT08A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT08A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT09A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT09A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT10A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT10A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT11A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT11A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT12A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT12A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT13A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT13A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT14A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT14A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT15A1</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT15A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT16A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT16A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT17A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT17A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT19A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT19A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx CMSIS</td>
+<td style="text-align: left;">2.6.8</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32F4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx CMSIS</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32G4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">1.8.0</td>
+<td style="text-align: left;"><a href="Drivers\STM32F4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx HAL</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\STM32G4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F4xx-NUCLEO</td>
+<td style="text-align: left;">1.2.8</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32F4xx-Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32G4xx_NUCLEO</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32G4xx_Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OUT01A2, OUT03A1, OUT04A1, OUT05A1, OUT06A1, OUT08A1,</td>
+<td style="text-align: left;">2.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OUT09A1, OUT10A1, OUT11A1, OUT12A1, OUT13A1, OUT14A1,</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OUT15A1, OUT16A1, OUT17A1, OUT19A1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.13.2 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.9.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</li>
+<li><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT01A2</strong>: One X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT01A2</strong> board: an expansion board based on ISO8200BQ (Galvanic isolated octal high-side smart power solid state-relay, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT03A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT04A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT05A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT06A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT08A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT09A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT09A1</strong> board: an expansion board based on IPS8160HQ (Octal Channel High-Side driver, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT10A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT11A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT11A1</strong> board: an expansion board based on ISO808 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT12A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT13A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT13A1</strong> board: an expansion board based on ISO808-1 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT14A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT15A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT15A1</strong> board: an expansion board based on IPS1025HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate a 2-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT16A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT16A1</strong> board: an expansion board based on IPS8200HQ (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT17A1</strong> board: an expansion board based on IPS8200HQ-1 (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it must be configured in SPI DAISY CHAIN mode and it will demonstrate a 16-channel digital output module.<br> Using a single expansion board, the system can be configured in parallel interface or in SPI interface, and in both cases it will demonstrate an 8-channel digital output module.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT17A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT16A1</strong> board: an expansion board based on IPS8200HQ (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT17A1</strong> board: an expansion board based on IPS8200HQ-1 (Octal high-side smart power solid-state relay with serial/parallel selectable interface on-chip, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it must be configured in SPI DAISY CHAIN mode and it will demonstrate a 16-channel digital output module.<br> Using a single expansion board, the system can be configured in parallel interface or in SPI interface, and in both cases it will demonstrate an 8-channel digital output module.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<ul>
+<li>Project <strong>OUT19A1</strong>: one X-NUCLEO expansion board chosen from the following list:
+<ul>
+<li><strong>X-NUCLEO-OUT19A1</strong> board: an expansion board based on IPS8160HQ-1 (Octal Channel High-Side driver, smart driving 1.0A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-2">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true"><strong>V2.0.0 / 21-July-2023</strong></label>
+<div>
+<h2 id="main-changes-3">Main Changes</h2>
+<h3 id="v2.0.0">V2.0.0</h3>
+<p>Official release of X-CUBE-IPS package.</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-3">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Components:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-CUBE-IPS</td>
+<td style="text-align: left;">2.0.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Documentation/X-CUBE-IPS_STM32F401RE-Nucleo.chm">STM32F401RE-NUCLEO</a>, <a href="Documentation/X-CUBE-IPS_STM32G431RB-Nucleo.chm">STM32G431RB-NUCLEO</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso8200bq</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso8200bq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips2050h</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips2050h_32</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips2050h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025h</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025h_32</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h_32\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips160hf</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips160hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips8160hq</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips161hf</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips161hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808a</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808_1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808a_1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025hf</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8160hq_1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq_1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT01A2</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT03A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT03A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT04A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT04A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT05A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT05A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT06A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT06A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT08A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT08A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT09A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT09A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT10A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT10A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT11A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT11A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT12A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT12A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT13A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT13A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT14A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT14A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT15A1</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT15A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT19A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT19A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx CMSIS</td>
+<td style="text-align: left;">2.6.8</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32F4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx CMSIS</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32G4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">1.8.0</td>
+<td style="text-align: left;"><a href="Drivers\STM32F4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx HAL</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\STM32G4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F4xx-NUCLEO</td>
+<td style="text-align: left;">1.2.8</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32F4xx-Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32G4xx_NUCLEO</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32G4xx_Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OUT01A2, OUT03A1, OUT04A1, OUT05A1, OUT06A1, OUT08A1,</td>
+<td style="text-align: left;">2.0.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OUT09A1, OUT10A1, OUT11A1, OUT12A1, OUT13A1, OUT14A1,</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OUT15A1, OUT19A1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-3">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-3">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.12.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.9.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-3">Supported Devices and Boards</h2>
+<ul>
+<li><p><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</p></li>
+<li><p><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</p></li>
+<li><p>Project <strong>OUT01A2</strong>: One X-NUCLEO expansion board chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT01A2</strong> board: an expansion board based on ISO8200BQ (Galvanic isolated octal high-side smart power solid state-relay, smart driving 0.7A per channel)</li>
+</ul></li>
+<li><p>Project <strong>OUT03A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>OUT04A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>OUT05A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>OUT06A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>OUT08A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>OUT10A1</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>OUT09A1</strong>: one X-NUCLEO expansion board chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT09A1</strong> board: an expansion board based on IPS8160HQ (Octal Channel High-Side driver, smart driving 0.7A per channel)</li>
+</ul></li>
+<li><p>Project <strong>OUT11A1</strong>: one X-NUCLEO expansion board chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT11A1</strong> board: an expansion board based on ISO808 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A per channel)</li>
+</ul></li>
+<li><p>Project <strong>OUT12A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+<li><p>Project <strong>OUT13A1</strong>: one X-NUCLEO expansion board chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT13A1</strong> board: an expansion board based on ISO808-1 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A per channel)</li>
+</ul></li>
+<li><p>Project <strong>OUT14A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (Regular_8_Channels) or a 16-channel (Regular_16_Channels) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+<li><p>Project <strong>OUT15A1</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT15A1</strong> board: an expansion board based on IPS1025HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate a 2-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>OUT19A1</strong>: one X-NUCLEO expansion board chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT19A1</strong> board: an expansion board based on IPS8160HQ-1 (Octal Channel High-Side driver, smart driving 1.0A per channel)</li>
+</ul></li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-3">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-3">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true"><strong>V1.1.1 / 15-March-2023</strong></label>
+<div>
+<h2 id="main-changes-4">Main Changes</h2>
+<h3 id="v1.1.1">V1.1.1</h3>
+<p>Official release of X-CUBE-IPS package.</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-4">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Components:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-CUBE-IPS</td>
+<td style="text-align: left;">1.1.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Documentation/X-CUBE-IPS_STM32F401RE-Nucleo.chm">STM32F401RE-NUCLEO</a>, <a href="Documentation/X-CUBE-IPS_STM32G431RB-Nucleo.chm">STM32G431RB-NUCLEO</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025h_2050h</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h_2050h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025hf</td>
+<td style="text-align: left;">1.0.3</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips160hf_161hf</td>
+<td style="text-align: left;">1.0.1</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips160hf_161hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8160hq</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808a</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT0xA1</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT0xA1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT15A1</td>
+<td style="text-align: left;">1.0.1</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT15A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT08_10A1</td>
+<td style="text-align: left;">1.0.1</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT08_10A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT09_19A1</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT09_19A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT11_13A1</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT11_13A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT12_14A1</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT12_14A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx CMSIS</td>
+<td style="text-align: left;">2.6.8</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32F4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx CMSIS</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32G4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">1.8.0</td>
+<td style="text-align: left;"><a href="Drivers\STM32F4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx HAL</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\STM32G4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F4xx-NUCLEO</td>
+<td style="text-align: left;">1.2.8</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32F4xx-Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32G4xx_NUCLEO</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32G4xx_Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Out03_04, Out05_06, Out08_10, Out09_19, Out11_13, Out12_14, Out15</td>
+<td style="text-align: left;">1.1.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-4">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-4">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.11.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.7.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-4">Supported Devices and Boards</h2>
+<ul>
+<li><p><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</p></li>
+<li><p><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</p></li>
+<li><p>Project <strong>Out03_04</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out05_06</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out08_10</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous X-NUCLEO expansion boards can be used.<br> If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out09_19</strong>: one X-NUCLEO expansion board chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT09A1</strong> board: an expansion board based on IPS8160HQ (Octal Channel High-Side driver, smart driving 0.7A per channel)</li>
+<li><strong>X-NUCLEO-OUT19A1</strong> board: an expansion board based on IPS8160HQ-1 (Octal Channel High-Side driver, smart driving 1.0A per channel)</li>
+</ul></li>
+<li><p>Project <strong>Out11_13</strong>: one X-NUCLEO expansion board chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT11A1</strong> board: an expansion board based on ISO808 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A per channel)</li>
+<li><strong>X-NUCLEO-OUT13A1</strong> board: an expansion board based on ISO808-1 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A per channel)</li>
+</ul></li>
+<li><p>Project <strong>Out12_14</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> Any combination of the previous expansion boards can be used.<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (build with USE_PAR_IND) or a 16-channel (build with USE_DAISY_CHAIN) digital output module.<br> In DAISY CHAIN mode the system must be always fully populated (with two properly configured boards).</p>
+</blockquote></li>
+<li><p>Project <strong>Out15</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT15A1</strong> board: an expansion board based on IPS1025HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE:<br> If the system is fully populated with two X-NUCLEO boards, it will demonstrate a 2-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-4">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-4">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true"><strong>V1.1.0 / 15-December-2022</strong></label>
+<div>
+<h2 id="main-changes-5">Main Changes</h2>
+<h3 id="v1.1.0">V1.1.0</h3>
+<p>Official release of X-CUBE-IPS package.</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-5">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Components:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-CUBE-IPS</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Documentation/X-CUBE-IPS_STM32F401RE-Nucleo.chm">STM32F401RE-NUCLEO</a>, <a href="Documentation/X-CUBE-IPS_STM32G431RB-Nucleo.chm">STM32G431RB-NUCLEO</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025h_2050h</td>
+<td style="text-align: left;">1.0.4 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h_2050h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025hf</td>
+<td style="text-align: left;">1.0.3 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips160hf_161hf</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips160hf_161hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips8160hq</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips8160hq\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iso808</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iso808a</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\iso808a\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT0xA1</td>
+<td style="text-align: left;">1.0.4 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT0xA1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT15A1</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT15A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT08_10A1</td>
+<td style="text-align: left;">1.0.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT08_10A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT09_19A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT09_19A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT11_13A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT11_13A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT12_14A1</td>
+<td style="text-align: left;">1.0.0 <span class="icon-st-add"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT12_14A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx CMSIS</td>
+<td style="text-align: left;">2.6.8</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32F4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx CMSIS</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32G4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">1.8.0</td>
+<td style="text-align: left;"><a href="Drivers\STM32F4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx HAL</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\STM32G4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F4xx-NUCLEO</td>
+<td style="text-align: left;">1.2.8</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32F4xx-Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32G4xx_NUCLEO</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32G4xx_Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Out03_04, Out05_06, Out08_10, Out09_19, Out11_13, Out12_14, Out15</td>
+<td style="text-align: left;">1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-5">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-5">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.11.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeMX (STM32Cube initialization code generator) V6.7.0</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-5">Supported Devices and Boards</h2>
+<ul>
+<li><p><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</p></li>
+<li><p><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</p></li>
+<li><p>Project <strong>Out03_04</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: Any combination of the previous X-NUCLEO expansion boards can be used. If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out05_06</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: Any combination of the previous X-NUCLEO expansion boards can be used. If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out08_10</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT08A1</strong> board: an expansion board based on IPS160HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT10A1</strong> board: an expansion board based on IPS161HF (Single High-Side Intelligent Power Switch, smart driving 0.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: Any combination of the previous X-NUCLEO expansion boards can be used. If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out09_19</strong>: one X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT09A1</strong> board: an expansion board based on IPS8160HQ (Octal Channel High-Side driver, smart driving 0.7A per channel)</li>
+<li><strong>X-NUCLEO-OUT19A1</strong> board: an expansion board based on IPS8160HQ-1 (Octal Channel High-Side driver, smart driving 1.0A per channel)</li>
+</ul></li>
+<li><p>Project <strong>Out11_13</strong>: one X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT11A1</strong> board: an expansion board based on ISO808 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 0.7A per channel)</li>
+<li><strong>X-NUCLEO-OUT13A1</strong> board: an expansion board based on ISO808-1 (Galvanic Isolated Octal High-Side Power Solid State Relay for high inductive loads, smart driving 1.0A per channel)</li>
+</ul></li>
+<li><p>Project <strong>Out12_14</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT12A1</strong> board: an expansion board based on ISO808A (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 0.7A loads)</li>
+<li><strong>X-NUCLEO-OUT14A1</strong> board: an expansion board based on ISO808A-1 (Galvanic Isolated Octal High-Side Power Solid State Relay with SPI interface for high inductive loads, smart driving 1.0A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: If the system is fully populated with two X-NUCLEO boards, it will demonstrate an 8+8-channel (build with USE_PAR_IND) or a 16-channel (build with USE_DAISY_CHAIN) High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out15</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT15A1</strong> board: an expansion board based on IPS1025HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: If the system is fully populated with two X-NUCLEO boards, it will demonstrate a 2-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-5">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-5">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true"><strong>V1.0.0 / 20-May-2022</strong></label>
+<div>
+<h2 id="main-changes-6">Main Changes</h2>
+<h3 id="first-release-v1.0.0">First release (V1.0.0)</h3>
+<p>Initial release for the project.</p>
+<p>Additional features:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Fixed bugs list:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-6">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Components:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-CUBE-IPS</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Documentation/X-CUBE-IPS_STM32F401RE-Nucleo.chm">STM32F401RE-NUCLEO</a>, <a href="Documentation/X-CUBE-IPS_STM32G431RB-Nucleo.chm">STM32G431RB-NUCLEO</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ips1025h_2050h</td>
+<td style="text-align: left;">1.0.3</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025h_2050h\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ips1025hf</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\Components\ips1025hf\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP OUT0xA1</td>
+<td style="text-align: left;">1.0.3</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT0xA1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP OUT15A1</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\OUT15A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx CMSIS</td>
+<td style="text-align: left;">2.6.8</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32F4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx CMSIS</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32G4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">1.8.0</td>
+<td style="text-align: left;"><a href="Drivers\STM32F4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx HAL</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;"><a href="Drivers\STM32G4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F4xx-NUCLEO</td>
+<td style="text-align: left;">1.2.8</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32F4xx-Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32G4xx_NUCLEO</td>
+<td style="text-align: left;">1.0.4</td>
+<td style="text-align: left;"><a href="Drivers\BSP\STM32G4xx_Nucleo\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Out03_04, Out05_06, Out15</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="known-limitations-6">Known Limitations</h2>
+<p>Outstanding bugs list</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements not met</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ticket</th>
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-6">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.32.0.0 + ST-LINK/V2 or ST-LINK/V3</li>
+<li>STM32CubeIDE for STM32 V1.9.0 + ST-LINK/V2 or ST-LINK/V3</li>
+</ul>
+<p><br />
+</p>
+<h2 id="supported-devices-and-boards-6">Supported Devices and Boards</h2>
+<ul>
+<li><p><strong>NUCLEO-F401RE</strong> (MB1136 rev C) STM32 Nucleo-64 development board with <strong>STM32F401RE</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html">NUCLEO-F401RE</a>]</p></li>
+<li><p><strong>NUCLEO-G431RB</strong> (MB1367C) STM32 Nucleo-64 development board with <strong>STM32G431RB</strong> MCU, supports Arduino and ST morpho connectivity [<a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-g431rb.html">NUCLEO-G431RB</a>]</p></li>
+<li><p>Project <strong>Out03_04</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT03A1</strong> board: an expansion board based on IPS2050H (Dual High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT04A1</strong> board: an expansion board based on IPS2050H-32 (Dual High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: Any combination of the previous X-NUCLEO expansion boards can be used. If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 8-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out05_06</strong>: Up to four X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT05A1</strong> board: an expansion board based on IPS1025H (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+<li><strong>X-NUCLEO-OUT06A1</strong> board: an expansion board based on IPS1025H-32 (Single High-Side Intelligent Power Switch, smart driving 5.7A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: Any combination of the previous X-NUCLEO expansion boards can be used. If the system is fully populated with four X-NUCLEO boards, it will demonstrate a 4-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+<li><p>Project <strong>Out15</strong>: Up to two X-NUCLEO expansion boards chosen from the following list:</p>
+<ul>
+<li><strong>X-NUCLEO-OUT15A1</strong> board: an expansion board based on IPS1025HF (Single High-Side Intelligent Power Switch, smart driving 2.5A loads)</li>
+</ul>
+<blockquote>
+<p>NOTE: If the system is fully populated with two X-NUCLEO boards, it will demonstrate a 2-channel High-Side Intelligent Power Switch.</p>
+</blockquote></li>
+</ul>
+<p><br />
+</p>
+<h2 id="backward-compatibility-6">Backward Compatibility</h2>
+<p>None</p>
+<p><br />
+</p>
+<h2 id="dependencies-6">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="sticky">
+<div class="columns">
+<div class="column" style="width:95%;">
+<p>For complete documentation on <strong>STM32 Microcontrollers</strong> , visit: [<a href="http://www.st.com/STM32">www.st.com/STM32</a>]</p>
+</div><div class="column" style="width:5%;">
+<p><abbr title="Based on template cx566953 version 2.1">Info</abbr></p>
+</div>
+</div>
+</footer>
+</body>
+</html>
