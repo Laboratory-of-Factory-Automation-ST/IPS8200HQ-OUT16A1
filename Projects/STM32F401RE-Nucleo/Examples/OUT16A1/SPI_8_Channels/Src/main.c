@@ -19,6 +19,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "app_ips_relay.h"
+#include "app_ips_custom.h"
+#include "eval_core.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -99,8 +101,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
-    MX_IPS_Relay_Process();
+	  usr_btn_routine(OUT16A1, _default);
+//    MX_IPS_Relay_Process();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

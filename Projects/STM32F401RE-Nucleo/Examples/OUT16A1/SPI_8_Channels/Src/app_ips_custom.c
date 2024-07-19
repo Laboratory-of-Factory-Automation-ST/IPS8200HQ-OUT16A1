@@ -18,6 +18,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "app_ips_custom.h"
+#include "eval_core.h"
 
 /** @addtogroup OUT_16_Example OUT_16_Example
   * @{
@@ -633,6 +634,7 @@ static void WATCHDOG_TIM_Config(uint32_t Freq)
 void BSP_PB_Callback(Button_TypeDef Button)
 {
   gButtonPressed = 1;
+  usr_btn_pressed_callback();
 }
 
 /**

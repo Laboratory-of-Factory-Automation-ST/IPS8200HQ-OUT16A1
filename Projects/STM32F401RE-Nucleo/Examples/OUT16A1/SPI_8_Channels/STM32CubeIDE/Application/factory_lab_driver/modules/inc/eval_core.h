@@ -1,7 +1,8 @@
 /**
   ******************************************************************************
-  * @file    file_name.h
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @file    eval_core.h
+  * @brief   This file contains the definition of core hardware evaluation
+  * 		 utilities.
   ******************************************************************************
   * @attention
   *
@@ -16,8 +17,8 @@
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __FILE_NAME_H
-#define __FILE_NAME_H
+#ifndef APPLICATION_FACTORY_LAB_DRIVER_MODULES_INC_EVAL_CORE_H_
+#define APPLICATION_FACTORY_LAB_DRIVER_MODULES_INC_EVAL_CORE_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -26,16 +27,23 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 
 /* Exported types ------------------------------------------------------------*/
+typedef enum Board_ctx_t {
+	OUT16A1
+} BoardContext_Typedef;
 
+typedef enum Setup_ctx_t {
+	_default
+} SetupContext_Typedef;
 /* Exported constants --------------------------------------------------------*/
 
 /* Exported macro ------------------------------------------------------------*/
 
 /* Exported functions prototypes ---------------------------------------------*/
-
+void usr_btn_routine(BoardContext_Typedef board, SetupContext_Typedef setup);
+void usr_btn_pressed_callback();
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif
+#endif /* APPLICATION_FACTORY_LAB_DRIVER_MODULES_INC_EVAL_CORE_H_ */
