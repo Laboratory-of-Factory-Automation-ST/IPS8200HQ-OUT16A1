@@ -29,6 +29,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 #define ROUTINE_CONTEXT(board_ctx, setup_ctx, step) ((board_ctx << 16) + (setup_ctx << 8) + step)
+
 /* Private variables ---------------------------------------------------------*/
 _Bool usr_btn_pressed = 0;
 uint8_t usr_btn_routine_step = 0;
@@ -41,11 +42,11 @@ uint8_t usr_btn_routine_step = 0;
 
 /*
  * @brief Main implementation of user button routine
- * @param Board context specifier
- * @param Setup context specifier
+ * @param Board context specifier from Board_ctx_t enumeration
+ * @param Setup context specifier from Setup_ctx_t enumeration
  * @retval None
  */
-void usr_btn_routine(BoardContext_Typedef board_ctx, SetupContext_Typedef setup_ctx) {
+void usr_btn_routine(const uint8_t board_ctx, const uint8_t setup_ctx) {
 	uint8_t ctrlMode;
 	if (usr_btn_pressed != 0) {
 		/* Debouncing */

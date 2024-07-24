@@ -103,7 +103,10 @@ extern SPI_HandleTypeDef hspi1;
   */
 
 /* BUS IO driver over SPI Peripheral */
-HAL_StatusTypeDef MX_SPI1_Init(SPI_HandleTypeDef* hspi);
+/*
+ * Commenting out incompatible function prototype with MXCube toolchain
+ * HAL_StatusTypeDef MX_SPI1_Init(SPI_HandleTypeDef* hspi);
+ */
 int32_t BSP_SPI1_Init(void);
 int32_t BSP_SPI1_DeInit(void);
 int32_t BSP_SPI1_Send(uint8_t *pData, uint16_t Length);

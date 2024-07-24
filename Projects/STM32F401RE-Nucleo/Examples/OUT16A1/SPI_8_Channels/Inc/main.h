@@ -24,17 +24,16 @@
 
 #ifdef __cplusplus
 extern "C" {
-#endif /* #ifdef __cplusplus */
+#endif
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "app_ips_conf.h"
-#include "out16a1_conf.h"
-#include "stm32f4xx_nucleo.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "app_ips_conf.h"
+#include "out16a1_conf.h"
+#include "stm32f4xx_nucleo.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -54,9 +53,10 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-void MX_TIM2_Init(void);
 void MX_TIM3_Init(void);
 void MX_TIM9_Init(void);
+void MX_SPI1_Init(void);
+void MX_TIM2_Init(void);
 
 /* USER CODE BEGIN EFP */
 
@@ -74,6 +74,8 @@ void MX_TIM9_Init(void);
 #define SPI_MOSI_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_12
 #define LD2_GPIO_Port GPIOB
+#define IN1_Pin GPIO_PIN_7
+#define IN1_GPIO_Port GPIOC
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
@@ -85,6 +87,6 @@ void MX_TIM9_Init(void);
 
 #ifdef __cplusplus
 }
-#endif /* #ifdef __cplusplus */
+#endif
 
 #endif /* __MAIN_H */

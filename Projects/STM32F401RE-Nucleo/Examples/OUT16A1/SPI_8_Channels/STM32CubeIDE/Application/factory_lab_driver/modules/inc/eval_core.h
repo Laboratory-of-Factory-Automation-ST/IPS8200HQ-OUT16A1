@@ -39,7 +39,7 @@ typedef enum Setup_ctx_t {
 /* Exported macro ------------------------------------------------------------*/
 
 /* Exported functions prototypes ---------------------------------------------*/
-void usr_btn_routine(BoardContext_Typedef board, SetupContext_Typedef setup);
+void usr_btn_routine(const uint8_t board_ctx, const uint8_t setup_ctx);
 void usr_btn_pressed_callback();
 
 #ifdef __cplusplus

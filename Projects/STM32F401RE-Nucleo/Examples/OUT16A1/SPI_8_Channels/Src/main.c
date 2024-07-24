@@ -18,13 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "app_ips_relay.h"
-#include "app_ips_custom.h"
-#include "eval_core.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "app_ips_relay.h"
+#include "app_ips_custom.h"
+#include "eval_core.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,7 +33,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define USE_FULL_ASSERT
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -69,6 +68,7 @@ static void MX_GPIO_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -91,18 +91,18 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_IPS_Relay_Init();
   /* USER CODE BEGIN 2 */
-
+  MX_IPS_Relay_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+//	  MX_IPS_Relay_Process();
 	  usr_btn_routine(OUT16A1, _default);
-//    MX_IPS_Relay_Process();
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -156,6 +156,7 @@ void SystemClock_Config(void)
 
 /**
   * @brief TIM2 Initialization Function
+  * @param None
   * @retval None
   */
 void MX_TIM2_Init(void)
@@ -200,6 +201,7 @@ void MX_TIM2_Init(void)
 
 /**
   * @brief TIM3 Initialization Function
+  * @param None
   * @retval None
   */
 void MX_TIM3_Init(void)
@@ -244,6 +246,7 @@ void MX_TIM3_Init(void)
 
 /**
   * @brief TIM9 Initialization Function
+  * @param None
   * @retval None
   */
 void MX_TIM9_Init(void)
@@ -281,6 +284,7 @@ void MX_TIM9_Init(void)
 
 /**
   * @brief GPIO Initialization Function
+  * @param None
   * @retval None
   */
 static void MX_GPIO_Init(void)
@@ -300,6 +304,9 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
@@ -341,6 +348,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : IN1_Pin */
+  GPIO_InitStruct.Pin = IN1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(IN1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PB3 */
   GPIO_InitStruct.Pin = GPIO_PIN_3;
